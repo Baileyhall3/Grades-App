@@ -1,0 +1,30 @@
+
+<HomeScreen>:
+    FloatLayout:
+        Label:
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .3
+            text: "Grade Checker"
+        Label:
+            pos_hint: {"top": .8, "left": 1}
+            size_hint: 1, .1
+            text: "My Courses"
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": .7, "left": 1}
+            size_hint: 1, .1
+            id: course_id
+        GridLayout:
+            rows: 3
+            pos_hint: {"top": .5, "left": 1}
+            size_hint: 1, .3
+            id: current_courses
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": .2, "left": 1}
+            size_hint: 1, .2
+            Image:
+                source: "icons/001-lines.png"
+            Image:
+                source: "icons/002-plus.png"
+
