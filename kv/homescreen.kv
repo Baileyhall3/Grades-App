@@ -3,7 +3,7 @@
     FloatLayout:
         canvas:
             Color:
-                rgb: utils.get_color_from_hex("FFFFFF")
+                rgb: utils.get_color_from_hex("15CCE5")
             Rectangle:
                 size: self.size
                 pos: self.pos
@@ -22,7 +22,7 @@
         Label:
             pos_hint: {"top": .8, "left": 1}
             size_hint: 1, .1
-            text: "My Courses"
+            text: "Grade Checker"
 
         GridLayout:
             rows: 1
@@ -43,9 +43,10 @@
             ImageButton:
                 source: "icons/001-lines.png"
                 on_release:
+                    root.manager.transition.direction = "left"
                     app.change_screen("settings_screen")
             ImageButton:
                 source: "icons/002-plus.png"
                 on_release:
-                    print("New page")
+                    app.change_screen("plus_page")
 

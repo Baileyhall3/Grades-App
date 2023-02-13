@@ -1,5 +1,5 @@
 #:import utils kivy.utils
-<SettingsScreen>:
+<PlusPage>:
     FloatLayout:
         canvas.before:
             Color:
@@ -19,28 +19,13 @@
             size_hint: 1, .1
             text: "Grade Checker"
 
-        Label:
-            pos_hint: {"top": .8, "left": 1}
-            size_hint: 1, .1
-            text: "Grade Checker"
 
-        Label:
-            pos_hint: {"top": .8, "left": 1}
-            size_hint: 1, .1
-            text: "Grade Checker"
-
-        Label:
-            pos_hint: {"top": .7, "left": 1}
-            size_hint: 1, .3
-            text: "Settings \n Accessibility \n\n Logout"
-            background_color: 1, 0, 0, 1
-            rgb: utils.get_color_from_hex("FFFFFF")
 
         GridLayout:
             rows: 1
             pos_hint: {"top": .2, "left": 1}
             size_hint: 1, .2
             ImageButton:
-                source: "icons/003-arrow.png"
+                source: "icons/004-arrowleft.png"
                 on_release:
                     app.change_screen("home_screen")

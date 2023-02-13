@@ -10,6 +10,8 @@ class ImageButton(ButtonBehavior, Image):
     pass
 class SettingsScreen(Screen):
     pass
+class PlusPage(Screen):
+    pass
 
 
 GUI = Builder.load_file("main.kv")
@@ -22,6 +24,6 @@ class MainApp(App):
         print(self.root.ids)
         screen_manager = self.root.ids['screen_manager']
         screen_manager.current = screen_name
-        screen_manager.transition.direction = 'left'
+        #screen_manager.transition.direction = transition
 
 MainApp().run()
