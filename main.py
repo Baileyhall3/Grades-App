@@ -3,6 +3,8 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.button import ButtonBehavior
 from kivy.uix.image import Image
+import requests
+import json
 
 class HomeScreen(Screen):
     pass
@@ -18,6 +20,12 @@ GUI = Builder.load_file("main.kv")
 class MainApp(App):
     def build(self):
         return GUI
+
+    def on_start(self):
+        result = requests.get("https://grade-checker-3d0f0-default-rtdb.firebaseio.com/username.json")
+        print("Okay", result.ok)
+        data = json.loads(result.content.decode())
+        print(data)
 
     def change_screen(self, screen_name):
         #Get the screen manager from kv file and switch screen
